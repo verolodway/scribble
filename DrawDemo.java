@@ -68,12 +68,27 @@ public class DrawDemo
     {
         Pen pen = new Pen(320, 260, myCanvas);
         pen.setColor(Color.GREEN);
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<n; i++) {
             pen.move(-(360/n));
             pen.turn(360/n);
         }
     }
-
+    
+    /**
+     * Método que dibuja una espiral cuadrada.
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(320, 260, myCanvas);
+        int y = 3;
+        pen.setColor(Color.GREEN);
+        for (int i=0; i<75; i++) {
+            pen.move(y);
+            pen.turn(90);
+            y++;
+        }
+    }
+    
     /**
      * Draw a wheel made of many squares.
      */
